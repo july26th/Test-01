@@ -2,9 +2,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		.switch {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 100px;
+			height: 50px;
+			background-color: #ccc;
+			border-radius: 40px;
+			border: 1px solid #ccc;
+			position: relative;
+			outline: none;		
+			transition: 0.2s;
+		}
+		.switch:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			width: 46px;
+			height: 48px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: 0.2s;
+		}
+		.switch:checked {
+			outline: none;
+			background-color: green;
+		}
+		.switch:checked:before {
+			left: 52px;
+		}
+	</style>
 </head>
 <body>
-	<h1>Aloha</h1>
-	<p>Test 01</p>
+	<h1>Switch Button</h1>
+	<input type="checkbox" class="switch">
 </body>
 </html>
